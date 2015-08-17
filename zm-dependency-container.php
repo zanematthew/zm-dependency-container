@@ -11,7 +11,7 @@ if ( ! class_exists( 'ZM_Dependency_Container' ) ){
         }
 
 
-        public function get_instance( $key, $value, $params ){
+        public function get_instance( $key=null, $value=null, $params=null ){
             if ( empty( $this->_instances[ $key ] )
                 || ! is_a( $this->_instances[ $key ], $value ) ){
                 $this->_instances[ $key ] = new $value( $params );
